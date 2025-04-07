@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra Visual</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🔗 Algoritmo de Dijkstra</h2>
+        <form method="POST">
+            <label>Introduce conexiones (formato: nodo1 nodo2 peso):</label><br>
+            <textarea name="data" required></textarea><br>
+
+            <label>Nodo de inicio:</label>
+            <input type="text" name="start" required><br>
+
+            <label>Nodo de destino:</label>
+            <input type="text" name="end" required><br>
+
+            <button type="submit">Calcular ruta más corta</button>
+        </form>
+
+        {% if result %}
+            <h3 class="{% if 'No hay ruta' in result %}error{% else %}success{% endif %}">{{ result }}</h3>
+            {% if 'No hay ruta' not in result %}
+                <img src="{{ graph_img }}" alt="Grafo">
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
