@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,22 +11,30 @@
     <div class="container">
         <h2>🔗 Algoritmo de Dijkstra</h2>
         <form method="POST">
-            <label>Introduce conexiones (formato: nodo1 nodo2 peso):</label><br>
-            <textarea name="data" required></textarea><br>
+            <div>
+                <label for="data">Conexiones (formato: nodo1 nodo2 peso):</label>
+                <textarea name="data" id="data" placeholder="A B 3" required></textarea>
+            </div>
 
-            <label>Nodo de inicio:</label>
-            <input type="text" name="start" required><br>
+            <div>
+                <label for="start">Nodo de inicio:</label>
+                <input type="text" name="start" id="start" placeholder="A" required>
+            </div>
 
-            <label>Nodo de destino:</label>
-            <input type="text" name="end" required><br>
+            <div>
+                <label for="end">Nodo de destino:</label>
+                <input type="text" name="end" id="end" placeholder="B" required>
+            </div>
 
             <button type="submit">Calcular ruta más corta</button>
         </form>
 
         {% if result %}
-            <h3 class="{% if 'No hay ruta' in result %}error{% else %}success{% endif %}">{{ result }}</h3>
+            <h3 class="{% if 'No hay ruta' in result %}error{% else %}success{% endif %}">
+                {{ result }}
+            </h3>
             {% if 'No hay ruta' not in result %}
-                <img src="{{ graph_img }}" alt="Grafo">
+                <img src="{{ graph_img }}" alt="Grafo generado">
             {% endif %}
         {% endif %}
     </div>

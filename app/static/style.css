@@ -1,82 +1,101 @@
 /* Estilos Generales */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff8800, #28a745); /* Fondo degradado naranja-verde */
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    /* Gris claro */
+    color: #333;
     margin: 0;
     padding: 0;
-    color: white;
+    text-align: center;
 }
 
 /* Contenedor principal */
 .container {
     max-width: 600px;
-    margin: 50px auto;
-    background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
-    padding: 25px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    color: black;
+    margin: 60px auto;
+    background: #ffffff;
+    /* Blanco puro */
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Título */
 h2 {
-    color: #ff8800; /* Naranja fuerte */
-    font-size: 26px;
+    color: #2c3e50;
+    /* Azul grisáceo */
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-/* Inputs y Botón */
-input, textarea {
-    width: 90%;
+/* Inputs y Textareas */
+input,
+textarea {
+    width: 100%;
     padding: 12px;
-    margin: 10px 0;
-    border: 2px solid #ff8800;
-    border-radius: 8px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     font-size: 16px;
-    background: #f8f9fa;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
 }
 
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea específico */
 textarea {
     height: 100px;
-    resize: none;
+    resize: vertical;
 }
 
-/* Botón con efecto */
+/* Botón */
 button {
-    background: #28a745; /* Verde fuerte */
+    background-color: #007bff;
+    /* Azul profesional */
     color: white;
     border: none;
-    padding: 12px 20px;
-    font-size: 18px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
-    background: #ff8800; /* Cambia a naranja */
+    background-color: #0056b3;
 }
 
 /* Mensajes de error y éxito */
 .error {
-    color: red;
-    font-weight: bold;
-    font-size: 18px;
+    color: #c0392b;
+    /* Rojo suave */
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 .success {
-    color: #28a745;
-    font-weight: bold;
-    font-size: 18px;
+    color: #27ae60;
+    /* Verde profesional */
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-/* Imagen del grafo con bordes y sombra */
+/* Imagen */
 img {
     margin-top: 20px;
     max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
     padding: 5px;
+    border: 1px solid #eee;
 }
